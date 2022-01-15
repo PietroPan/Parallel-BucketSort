@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include<omp.h> 
 #include "bucket_sort.h"
 
 struct bucket {
@@ -17,7 +18,8 @@ void merge(float arr[], int l, int m, int r)
     int n2 = r - m;
 
     /* create temp arrays */
-    float L[n1], R[n2];
+    float* L = (float*)malloc(sizeof(float)*n1);
+    float* R = (float*)malloc(sizeof(float)*n2);
 
     /* Copy data to temp arrays L[] and R[] */
     for (i = 0; i < n1; i++)
@@ -56,6 +58,9 @@ void merge(float arr[], int l, int m, int r)
         j++;
         k++;
     }
+    
+    free(R);
+    free(L);
 }
 
 /* l is for left index and r is right index of the
@@ -80,11 +85,11 @@ void mergeSort(float arr[], int l, int r)
 
 
 
-void bucketSort(float a[], int size){
+void bucketSort(float a[], int size, int nBuckets, int rangeB){
   //inicialização dos buckets
-  struct bucket bucketsVector[10];
+  struct bucket bucketsVector[nBuckets];
   int i;
-  for(i=0; i<10; i++){
+  for(i=0; i<nBuckets; i++){
     bucketsVector[i].value = (float*)malloc(sizeof(float)*size);
     bucketsVector[i].total=0;
   }
@@ -92,7 +97,9 @@ void bucketSort(float a[], int size){
   //colocar cada nr dentro de um bucket
   int pos;
   for(i=0; i<size; i++){
-      pos = a[i]/10;
+      pos = a[i]/rangeB;
+      if (pos<0) pos=0;
+      if (pos>=nBuckets) pos=nBuckets-1;
       bucketsVector[pos].value[bucketsVector[pos].total]=a[i];
       bucketsVector[pos].total++;
    }
@@ -101,9 +108,10 @@ void bucketSort(float a[], int size){
 
   //Ordenar cada bucket  (Podemos mudar o algoritmo para Radiz MSD, supostamente é o melhor para paralelizar)
   //Por os numeros ordenados no array inicial
-  for(i=0,aux=0; i<10; i++){
+  for(i=0,aux=0; i<nBuckets; i++){
     mergeSort(bucketsVector[i].value, 0, bucketsVector[i].total-1);
     size_bucket=bucketsVector[i].total;
+    printf("[%.2f%% in bucket %d]\n",(float)size_bucket/(float)size*100,i);
     for(j=0; j<size_bucket; j++){
       a[aux+j]=bucketsVector[i].value[j];
     }
