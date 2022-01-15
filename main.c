@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<omp.h> 
-
+#include <omp.h> 
 #include "bucket_sort.h"
 
 int main (void){

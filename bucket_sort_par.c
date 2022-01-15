@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h> 
-#include "mergeSort.h"
 #include "bucket_sort.h"
+#include "mergeSort.h"
 
 struct bucket {
   int total;
   float* value;
 };
-
 
 void bucketSort(float a[], int size, int nBuckets, int rangeB){
   //inicialização dos buckets
