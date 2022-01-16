@@ -1,0 +1,49 @@
+
+#PartitionName=low Nodes=compute-662-1 Default=YES OverSubscribe=NO      PriorityTier=10 PreemptMode=cancel
+#PartitionName=med Nodes=compute-662-1 Default=NO  OverSubscribe=FORCE:1 PriorityTier=20 PreemptMode=suspend
+#PartitionName=hi  Nodes=compute-662-1 Default=NO  OverSubscribe=FORCE:1 PriorityTier=30 PreemptMode=off
+
+#PartitionName=active Nodes=compute-662-1  OverSubscribe=FORCE:10 PriorityTier=10 
+#PartitionName=hipri Nodes=compute-662-1  Shared=NO Priority=3 PreemptMode=REQUEUE 
+
+#PartitionName=DEFAULT AllocNodes=ALL State=UP
+#PartitionName=DEFAULT AllocNodes=search7,search7.di.uminho.pt,login-0-0,login-0-0.local State=UP
+#
+# Particoes publicas
+#
+PartitionName=day \ 
+Nodes=compute-113-2,compute-113-3,compute-113-4,compute-113-11,compute-113-12,compute-113-13,compute-113-14,compute-113-15,compute-113-16,compute-113-17,compute-113-18,compute-113-19,compute-113-20,compute-113-102,compute-134-1,compute-134-5,compute-134-6,compute-134-7,compute-134-9,compute-134-10,compute-134-12,compute-134-14,compute-134-16,compute-134-17,compute-134-18,compute-134-19,compute-134-20,compute-134-111,compute-134-112,compute-134-113,compute-134-114,compute-134-115,compute-134-116,compute-145-[1-2],compute-156-1,compute-165-1,compute-315-1 \
+AllowAccounts=ALL AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local  MaxTime=01-00 State=UP Priority=10 QOS=day OverSubscribe=EXCLUSIVE  Default=YES
+#
+PartitionName=week \
+Nodes=compute-113-2,compute-113-3,compute-113-4,compute-113-17,compute-113-18,compute-113-19,compute-113-20,compute-113-102,compute-134-1,compute-134-3,compute-134-4,compute-134-5,compute-134-6,compute-134-7,compute-134-9,compute-134-10,compute-134-12,compute-134-14,compute-134-16,compute-134-17,compute-134-18,compute-134-19,compute-134-20,compute-134-101,compute-134-102,compute-134-111,compute-134-112,compute-134-113,compute-134-114,compute-134-115,compute-134-116,compute-156-1,compute-165-1 \
+AllowAccounts=ALL AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local  MaxTime=07-00 State=UP Priority=5 QOS=week OverSubscribe=EXCLUSIVE
+#
+PartitionName=fortnight \
+Nodes=compute-113-2,compute-113-3,compute-113-4,compute-113-17,compute-113-18,compute-113-19,compute-113-20,compute-113-102,compute-134-1,compute-134-3,compute-134-4,compute-134-5,compute-134-6,compute-134-7,compute-134-9,compute-134-10,compute-134-12,compute-134-14,compute-134-16,compute-134-17,compute-134-18,compute-134-19,compute-134-20,compute-134-101,compute-134-102,compute-134-111,compute-134-112,compute-134-113,compute-134-114,compute-134-115,compute-134-116,compute-156-1,compute-165-1 \
+AllowAccounts=ALL AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local  MaxTime=14-00 State=UP Priority=3 QOS=fortnight OverSubscribe=NO
+#
+PartitionName=month \
+Nodes=compute-113-[3-4,11-20,102],compute-134-[1,5-7,9-10,12,14,16-20,111-116],compute-156-1,compute-165-1,compute-315-1 \
+AllowAccounts=ALL AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local  MaxTime=30-00 State=UP Priority=1 QOS=month OverSubscribe=NO
+#
+# Particoes privadas EDU
+#
+PartitionName=acomp  Nodes=compute-134-3,compute-134-4 AllowGroups=acomp,impe,6impe,admin AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=2 QOS=acomp State=UP Priority=50
+PartitionName=cpar  Nodes=compute-134-101,compute-134-102 AllowGroups=cpar,impe,6impe,admin AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=20:00  State=UP Priority=50 QOS=cpar
+#CpuFreqDef=Performance
+#PartitionName=cpd  Nodes=compute-641-[11-11] AllowGroups=acomp,impe,ajds AllocNodes=search7,search7.di.uminho.pt,login-0-0,login-0-0.local OverSubscribe=EXCLUSIVE MaxTime=2 QOS=acomp State=UP Priority=50
+#PartitionName=cdados  Nodes=compute-641-[11-11],compute-662-1,compute-881-1 AllowGroups=cdados,impe,ajds AllocNodes=search7,search7.di.uminho.pt,login-0-0,login-0-0.local OverSubscribe=EXCLUSIVE MaxTime=02:00:00 State=UP Priority=50
+#
+# Particoes privadas SCI
+#
+#PartitionName=impe Nodes=compute-641-[11-11]  AllowAccounts=impe  AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=30-00 State=UP QOS=impe Priority=100
+PartitionName=biocnat	Nodes=compute-124-[1-2],compute-144-[1-2],compute-145-1 AllowAccounts=biocnat  AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=30-00 State=UP QOS=biocnat Priority=100
+PartitionName=physics	Nodes=compute-113-[2-4,11-14]  AllowAccounts=cf   AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=30-00 State=UP Priority=100
+PartitionName=mogipc	Nodes=compute-113-[15-16],compute-145-2,compute-315-1  AllowAccounts=mogipc,impe   AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local OverSubscribe=EXCLUSIVE MaxTime=30-00 State=UP Priority=100
+#
+PartitionName=cbpf  Nodes=compute-881-2 AllowGroups=mogipc,admin AllocNodes=search7,search7.di.uminho.pt,search7sci,search7edu,search7sci.local,search7edu.local  OverSubscribe=YES  MaxTime=05-00 State=UP
+#PartitionName=skylake  Nodes=compute-881-1 AllowGroups=cpd,ajds AllocNodes=search7,search7.di.uminho.pt,login-0-0,login-0-0.local MaxTime=99:00:00 OverSubscribe=YES State=UP 
+#PartitionName=matlab  Nodes=compute-881-1 AllowGroups=ananum,ajds AllocNodes=search7,search7.di.uminho.pt,login-0-0,login-0-0.local MaxTime=99:00:00 OverSubscribe=EXCLUSIVE State=UP 
+#PartitionName=DEBUG
+

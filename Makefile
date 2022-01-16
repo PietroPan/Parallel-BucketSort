@@ -1,5 +1,5 @@
 # source files.
-SRC = bucket_sort.c main.c
+SRC = quick_sort.c mergeSort.c bucket_sort_par.c bucket_sort.c main.c
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -9,7 +9,7 @@ OUT = sort
 INCLUDES = -I.
  
 # C compiler flags 
-CCFLAGS = -O2 -Wall -I/share/apps/papi/5.4.1/include
+CCFLAGS = -O2 -fopenmp -Wall -I/share/apps/papi/5.4.1/include
 
 # compiler
 CCC = gcc 
@@ -38,3 +38,4 @@ depend:  dep
 
 clean:
 	rm -f *.o .a *~ Makefile.bak $(OUT)
+

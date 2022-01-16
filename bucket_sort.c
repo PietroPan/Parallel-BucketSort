@@ -36,7 +36,7 @@ void bucketSort(float a[], int size, int nBuckets, int rangeB){
   for(i=0,aux=0; i<nBuckets; i++){
     mergeSort(bucketsVector[i].value, 0, bucketsVector[i].total-1);
     size_bucket=bucketsVector[i].total;
-    printf("[%.2f%% in bucket %d]\n",(float)size_bucket/(float)size*100,i);
+    //printf("[%.2f%% in bucket %d]\n",(float)size_bucket/(float)size*100,i);
     for(j=0; j<size_bucket; j++){
       a[aux+j]=bucketsVector[i].value[j];
     }
