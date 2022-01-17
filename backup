@@ -1,21 +1,3 @@
-#!/bin/bash
-
-#SBATCH --output=logs/HalfSize!!_%j.log     # Standard output and error log
-
-MY=/home/pg46950/Parallel-BucketSort/
-VECTOR_SIZE=1000
-N_BUCKETS=256
-N_RUNS=25
-PRINT_INFO=1
-
-
-module load papi/5.4.1
-
-export OMP_NUM_THREADS=1
-
-VECTOR_SIZE=10000000
-$MY/sort  $VECTOR_SIZE $N_BUCKETS $PARALLEL $N_RUNS $PRINT_INFO
-
 VECTOR_SIZE=5000000
 $MY/sort  $VECTOR_SIZE $N_BUCKETS $PARALLEL $N_RUNS $PRINT_INFO
 
@@ -39,5 +21,3 @@ $MY/sort  $VECTOR_SIZE $N_BUCKETS $PARALLEL $N_RUNS $PRINT_INFO
 
 VECTOR_SIZE=1000
 $MY/sort  $VECTOR_SIZE $N_BUCKETS $PARALLEL $N_RUNS $PRINT_INFO
-
-

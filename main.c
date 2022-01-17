@@ -14,7 +14,7 @@ static int alloc_vector (int **v, int v_size);
 static int ini_vector (int **v, int v_size);
 static int free_vector (int **v);
 static float my_rand (int N);
-static void getDistribution(int v[],int N,int nBuckets);
+//static void getDistribution(int v[],int N,int nBuckets);
 
 //void (*func)(float *, int);
 #define NUM_EVENTS 4
@@ -115,9 +115,9 @@ int main (int argc, char *argv[]) {
             min_usec = elapsed_usec;
             for (i=0 ; i< NUM_EVENTS ; i++) min_values[i] = values [i];
         }
-        for (i=0;i<v_size;i++){
+        /*for (i=0;i<v_size;i++){
           fprintf(stdout,"%d\n",v[i]);
-        }
+        }*/
         //printf("\n");
 	    free_vector (&v);
         if (!ini_vector (&v, v_size)) return 0;

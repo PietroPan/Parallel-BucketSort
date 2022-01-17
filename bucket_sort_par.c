@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <omp.h> 
 #include "bucket_sort_par.h"
-#include "mergeSort.h"
-#include "quick_sort.h"
+#include "sortingAlgs/mergeSort.h"
+#include "sortingAlgs/quick_sort.h"
 #include "math.h"
 
 struct bucket {

@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h> 
-#include "mergeSort.h"
+#include "sortingAlgs/mergeSort.h"
 #include "bucket_sort.h"
-#include "quick_sort.h"
+#include "sortingAlgs/quick_sort.h"
+#include "sortingAlgs/insertion_sort.h"
 #include "math.h"
 
 struct bucket {
@@ -17,20 +18,28 @@ void bucketSort(int a[], int size, int nBuckets){
   struct bucket bucketsVector[nBuckets];
 
   int i, size_r=size, nBuckets_r=nBuckets;
-  int* r = a;
-  
-  for(i=0; i<nBuckets_r; i++){
-    bucketsVector[i].value = (int*)malloc(sizeof(int)*size_r);
-    bucketsVector[i].total=0;
-  }
+  int* r = a, pos;
 
-  //colocar cada nr dentro de um bucket
-  int pos;
+  /*int sB[nBuckets_r];
+  for(i=0; i<nBuckets_r;i++) sB[i]=0;
   for(i=0; i<size_r; i++){
       pos = floor((float)r[i]/size_r*nBuckets_r);
       if (pos<0) pos=0;
       if (pos>=nBuckets_r) pos=nBuckets_r-1;
-      bucketsVector[pos].value[bucketsVector[pos].total]=a[i];
+      sB[pos]++;
+  }*/
+  
+  for(i=0; i<nBuckets_r; i++){
+    bucketsVector[i].value = (int*)malloc(sizeof(int)*(size_r/2));
+    bucketsVector[i].total=0;
+  }
+
+  //colocar cada nr dentro de um bucket
+  for(i=0; i<size_r; i++){
+      pos = floor((float)r[i]/size_r*nBuckets_r);
+      if (pos<0) pos=0;
+      if (pos>=nBuckets_r) pos=nBuckets_r-1;
+      bucketsVector[pos].value[bucketsVector[pos].total]=r[i];
       bucketsVector[pos].total++;
    }
 
