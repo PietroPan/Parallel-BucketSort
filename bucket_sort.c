@@ -4,28 +4,30 @@
 #include "mergeSort.h"
 #include "bucket_sort.h"
 #include "quick_sort.h"
+#include "math.h"
+
 struct bucket {
   int total;
-  float* value;
+  int* value;
 };
 
 
-void bucketSort(float a[], int size, int nBuckets, int rangeB){
+void bucketSort(int a[], int size, int nBuckets){
   //inicialização dos buckets
   struct bucket bucketsVector[nBuckets];
 
-  int i, size_r=size, nBuckets_r=nBuckets, rangeB_r=rangeB;
-  float* r = a;
+  int i, size_r=size, nBuckets_r=nBuckets;
+  int* r = a;
   
   for(i=0; i<nBuckets_r; i++){
-    bucketsVector[i].value = (float*)malloc(sizeof(float)*size_r);
+    bucketsVector[i].value = (int*)malloc(sizeof(int)*size_r);
     bucketsVector[i].total=0;
   }
 
   //colocar cada nr dentro de um bucket
   int pos;
   for(i=0; i<size_r; i++){
-      pos = (r[i]/rangeB_r*nBuckets_r);
+      pos = floor((float)r[i]/size_r*nBuckets_r);
       if (pos<0) pos=0;
       if (pos>=nBuckets_r) pos=nBuckets_r-1;
       bucketsVector[pos].value[bucketsVector[pos].total]=a[i];

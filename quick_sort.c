@@ -2,15 +2,15 @@
 #include "quick_sort.h"
 
 // function to swap elements
-void swap(float *a, float *b) {
-  float t = *a;
+void swap(int *a, int *b) {
+  int t = *a;
   *a = *b;
   *b = t;
 }
 
 // function to find the partition position
-int partition(float array[], int low, int high) {
-  float pivot = array[high];
+int partition(int array[], int low, int high) {
+  int pivot = array[high];
   int i = (low - 1),j;
 
   for (j = low; j < high; j++) {
@@ -24,7 +24,7 @@ int partition(float array[], int low, int high) {
   return (i + 1);
 }
 
-void quickSort(float array[], int low, int high) {
+void quickSort(int array[], int low, int high) {
   if (low < high) {
     int pi = partition(array, low, high);
     quickSort(array, low, pi - 1);

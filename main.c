@@ -9,12 +9,12 @@
 #include "bucket_sort.h"
 #include "bucket_sort_par.h"
 
-static int read_command_line (int argc, char *argv[], int *v_size, int *nBuckets, int *nRuns,int *rangeB, int *info);
-static int alloc_vector (float **v, int v_size);
-static int ini_vector (float **v, int v_size, int rangeB);
-static int free_vector (float **v);
-static float my_rand (int rangeB);
-//static void getDistribution(float v[],int N,int nBuckets,int rangeB);
+static int read_command_line (int argc, char *argv[], int *v_size, int *nBuckets, int *nRuns, int *info);
+static int alloc_vector (int **v, int v_size);
+static int ini_vector (int **v, int v_size);
+static int free_vector (int **v);
+static float my_rand (int N);
+static void getDistribution(int v[],int N,int nBuckets);
 
 //void (*func)(float *, int);
 #define NUM_EVENTS 4
@@ -24,12 +24,12 @@ long long values[NUM_EVENTS], min_values[NUM_EVENTS], total_values[NUM_EVENTS];
 int retval, EventSet=PAPI_NULL;
 
 int main (int argc, char *argv[]) {
-    int v_size=1E8,nBuckets=1024,nRuns=10,rangeB=1,info=1;//input
+    int v_size=1E8,nBuckets=1024,nRuns=10,info=1;//input
     long long start_usec, end_usec, elapsed_usec, min_usec=0L,total_usec=0L;
     int i, run,num_hwcntrs = 0,th=atoi(getenv("OMP_NUM_THREADS"));
-    float *v;
+    int *v;
 
-    read_command_line(argc,argv,&v_size,&nBuckets,&nRuns,&rangeB,&info);
+    read_command_line(argc,argv,&v_size,&nBuckets,&nRuns,&info);
 
     printf ( "\nSetting up PAPI...");
     // Initialize PAPI
@@ -68,14 +68,14 @@ int main (int argc, char *argv[]) {
 
     // ini Vector
     //fprintf (stdout, "Initializing vector A...");
-    if (!ini_vector (&v, v_size,rangeB)) return 0;
+    if (!ini_vector (&v, v_size)) return 0;
     //fprintf (stdout, "done!\n");
 
     // warmup caches
     fprintf (stdout, "Warming up caches...");
-    bucketSort(v, v_size, nBuckets, rangeB);
+    bucketSort(v, v_size, nBuckets);
     free_vector(&v);
-    if (!ini_vector (&v, v_size,rangeB)) return 0;
+    if (!ini_vector (&v, v_size)) return 0;
     fprintf (stdout, "done!\n");
 
     fprintf (stdout, "\nVector Size: %d\nNumber of Bucktes: %d\n",v_size,nBuckets);
@@ -96,7 +96,7 @@ int main (int argc, char *argv[]) {
             return 0;
         }
 
-        bucketSort(v, v_size, nBuckets, rangeB);
+        bucketSort(v, v_size, nBuckets);
 
         /* Stop counting events */
         if (PAPI_stop(EventSet,values) != PAPI_OK) {
@@ -115,14 +115,14 @@ int main (int argc, char *argv[]) {
             min_usec = elapsed_usec;
             for (i=0 ; i< NUM_EVENTS ; i++) min_values[i] = values [i];
         }
-        /*for (i=0;i<v_size;i++){
-          fprintf(stdout,"%f\n",v[i]);
-        }*/
+        for (i=0;i<v_size;i++){
+          fprintf(stdout,"%d\n",v[i]);
+        }
         //printf("\n");
 	    free_vector (&v);
-        if (!ini_vector (&v, v_size,rangeB)) return 0;
+        if (!ini_vector (&v, v_size)) return 0;
     } // end runs
-    //getDistribution(v,v_size,nBuckets,rangeB);
+    //getDistribution(v,v_size,nBuckets);
 
     //fprintf(stdout,"\nMin wall clock time: %lld usecs\n", min_usec);
     fprintf(stdout,"\nWall clock time: %lld usecs\n", total_usec/nRuns);
@@ -142,35 +142,33 @@ int main (int argc, char *argv[]) {
     return 0;
 }
 
-int read_command_line (int argc, char *argv[], int *v_size, int *nBuckets, int *nRuns,int *rangeB, int *info){
+int read_command_line (int argc, char *argv[], int *v_size, int *nBuckets, int *nRuns, int *info){
 
     if (argc>1) *v_size=atoi(argv[1]);
     if (argc>2) *nBuckets=atoi(argv[2]);
     if (argc>3) *nRuns=atoi(argv[3]);
-    if (argc>4) *rangeB=atoi(argv[4]);
-    if (argc>5) *info=atoi(argv[5]);
+    if (argc>4) *info=atoi(argv[4]);
 
     return 1;
 }
 
 
-void getDistribution(float v[],int N,int nBuckets,int rangeB){
+void getDistribution(int v[],int N,int nBuckets){
     printf("\n");
     int dist[nBuckets];
     memset(dist,0,nBuckets*sizeof(int));
     int i,j,pos;
     for(i=0; i<N; i++){
-        pos = floor(v[i]/rangeB*nBuckets);
-        //printf("%d\n",pos);
+        pos=floor((float)v[i]/N*nBuckets);
         if (pos<0) pos=0;
         if (pos>=nBuckets) pos=nBuckets-1;
         dist[pos]++;
      }
 
-    printf("Bucket Distribution:\n");
     float aux=(float)nBuckets/(float)16;
     int nD=floor(aux),mnD,cnt=0, distV;
     float decI=aux-nD,dec=decI;
+    printf("%f\n",decI);
     for(i=0; i<16; i++){
         if(dec>=1) {
             mnD=nD+1;
@@ -186,9 +184,9 @@ void getDistribution(float v[],int N,int nBuckets,int rangeB){
     }
 }
 
-int alloc_vector (float **v, int N) {
+int alloc_vector (int **v, int N) {
     
-    *v = (float *) malloc (N*sizeof(float));
+    *v = (int *) malloc (N*sizeof(int));
     if (!(*v)) {
         printf("Could not allocate memory for vector!\n");
         return 0;
@@ -196,29 +194,29 @@ int alloc_vector (float **v, int N) {
     return 1;
 }
 
-float my_rand (int rangeB) {
+float my_rand (int N) {
     double d;
     
     d = drand48 ();
     //d -=0.5;
     //d *= drand48();
     //d -=0.5;
-    d *= rangeB;
-    return ((float)d);
+    d *= N;
+    return ((int)d);
 }
 
-int ini_vector (float **v, int N,int rangeB) {
+int ini_vector (int **v, int N) {
     int i;
-    float *ptr;
+    int *ptr;
     
     if (!alloc_vector (v, N)) return 0;
     for (i=0 , ptr = (*v) ; i<N ; i++ , ptr++) {
-        *ptr = my_rand(rangeB);
+        *ptr = my_rand(N);
     }
     return 1;
 } 
 
-int free_vector (float **v) {
+int free_vector (int **v) {
     free (*v);
     *v = NULL;
     return 1;

@@ -47,7 +47,7 @@ void bucketSortPar(float a[], int size, int nBuckets, int rangeB){
   for(i=0; i<nBuckets; i++){
     //id = omp_get_thread_num();
     //printf("Thread %d sorting bucket %d\n",id,i);
-    quickSort(bucketsVector[i].value, 0, bucketsVector[i].total-1);
+    //quickSort(bucketsVector[i].value, 0, bucketsVector[i].total-1);
     //mergeSort(bucketsVector[i].value, 0, bucketsVector[i].total-1);
   }
 
