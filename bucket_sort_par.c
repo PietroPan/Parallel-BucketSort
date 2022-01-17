@@ -34,17 +34,16 @@ void bucketSortPar(float a[], int size, int nBuckets, int rangeB){
   for(i=0; i<size; i++){
       pos=floor(a[i]/rangeB*nBuckets);
       if (pos<0) pos=0;
-      if (pos>=nBuckets) pos=nBuckets-1;
-
+      if (pos>=nBuckets) pos=nBuckets-1;        
             bucketsVector[pos].value[bucketsVector[pos].total]=a[i];
-            bucketsVector[pos].total++;
-   }
+            bucketsVector[pos].total++;  
+  }
 
   int size_bucket, aux=0,j;
 
   //Ordenar cada bucket  (Podemos mudar o algoritmo para Radiz MSD, supostamente é o melhor para paralelizar)
   //Por os numeros ordenados no array inicial
-  #pragma omp parallel for schedule(static)
+  #pragma omp parallel for schedule(dynamic)
   for(i=0; i<nBuckets; i++){
     //id = omp_get_thread_num();
     //printf("Thread %d sorting bucket %d\n",id,i);
