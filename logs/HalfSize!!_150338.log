@@ -1,0 +1,144 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 745737 usecs
+PAPI_TOT_CYC = 2219824256
+PAPI_TOT_INS = 2290095146
+PAPI_L1_DCM = 8506598
+PAPI_L2_DCM = 1664295
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 5000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 361298 usecs
+PAPI_TOT_CYC = 1049713162
+PAPI_TOT_INS = 1082625617
+PAPI_L1_DCM = 3438698
+PAPI_L2_DCM = 763703
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 1000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 59966 usecs
+PAPI_TOT_CYC = 182069899
+PAPI_TOT_INS = 187719034
+PAPI_L1_DCM = 506157
+PAPI_L2_DCM = 105040
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 500000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 28462 usecs
+PAPI_TOT_CYC = 85285049
+PAPI_TOT_INS = 87729718
+PAPI_L1_DCM = 281143
+PAPI_L2_DCM = 55360
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 100000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 5543 usecs
+PAPI_TOT_CYC = 14490734
+PAPI_TOT_INS = 14796372
+PAPI_L1_DCM = 50805
+PAPI_L2_DCM = 14921
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 50000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 2084 usecs
+PAPI_TOT_CYC = 6549290
+PAPI_TOT_INS = 6850514
+PAPI_L1_DCM = 21999
+PAPI_L2_DCM = 9158
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 360 usecs
+PAPI_TOT_CYC = 1086994
+PAPI_TOT_INS = 1207995
+PAPI_L1_DCM = 5968
+PAPI_L2_DCM = 740
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 5000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 180 usecs
+PAPI_TOT_CYC = 523600
+PAPI_TOT_INS = 623729
+PAPI_L1_DCM = 4087
+PAPI_L2_DCM = 407
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 1000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 58 usecs
+PAPI_TOT_CYC = 141671
+PAPI_TOT_INS = 233518
+PAPI_L1_DCM = 2207
+PAPI_L2_DCM = 93
+
+That's all, folks

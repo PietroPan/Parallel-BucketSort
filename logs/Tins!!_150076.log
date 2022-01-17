@@ -1,0 +1,16 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 1000
+Number of Bucktes: 8
+Sequencial Algorithm
+
+Wall clock time: 104 usecs
+PAPI_TOT_CYC = 158453
+PAPI_TOT_INS = 149007
+PAPI_L1_DCM = 204
+PAPI_L2_DCM = 46
+
+That's all, folks
