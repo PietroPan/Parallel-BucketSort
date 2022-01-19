@@ -1,0 +1,16 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 256
+Parallel Algorithm with 40 threads
+
+Wall clock time: 275725 usecs
+PAPI_TOT_CYC = 558364708
+PAPI_TOT_INS = 598366007
+PAPI_L1_DCM = 4776471
+PAPI_L2_DCM = 1594267
+
+That's all, folks

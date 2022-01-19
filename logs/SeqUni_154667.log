@@ -1,0 +1,34 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...
+0.000000
+[6.24% in buckets 0..15]
+[6.24% in buckets 16..31]
+[6.27% in buckets 32..47]
+[6.25% in buckets 48..63]
+[6.26% in buckets 64..79]
+[6.25% in buckets 80..95]
+[6.27% in buckets 96..111]
+[6.23% in buckets 112..127]
+[6.26% in buckets 128..143]
+[6.24% in buckets 144..159]
+[6.26% in buckets 160..175]
+[6.24% in buckets 176..191]
+[6.25% in buckets 192..207]
+[6.24% in buckets 208..223]
+[6.24% in buckets 224..239]
+[6.25% in buckets 240..255]
+done!
+
+Vector Size: 10000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+Wall clock time: 756279 usecs
+PAPI_TOT_CYC = 2233379468
+PAPI_TOT_INS = 2290048162
+PAPI_L1_DCM = 10170518
+PAPI_L2_DCM = 1761505
+
+That's all, folks

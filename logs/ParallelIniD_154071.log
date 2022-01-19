@@ -1,0 +1,1 @@
+/var/spool/slurmd/job154071/slurm_script: line 17: 16428 Segmentation fault      $MY/sort $VECTOR_SIZE $N_BUCKETS $N_RUNS $PRINT_INFO

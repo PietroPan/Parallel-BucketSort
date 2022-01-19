@@ -1,0 +1,35 @@
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 100000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+[6.25% in buckets 0..15]
+[6.25% in buckets 16..31]
+[6.25% in buckets 32..47]
+[6.25% in buckets 48..63]
+[6.25% in buckets 64..79]
+[6.25% in buckets 80..95]
+[6.25% in buckets 96..111]
+[6.25% in buckets 112..127]
+[6.25% in buckets 128..143]
+[6.25% in buckets 144..159]
+[6.25% in buckets 160..175]
+[6.25% in buckets 176..191]
+[6.25% in buckets 192..207]
+[6.25% in buckets 208..223]
+[6.25% in buckets 224..239]
+[6.25% in buckets 240..255]
+
+Wall clock time: 1559555 usecs
+PAPI_TOT_CYC = 3854006143
+PAPI_TOT_INS = 3502802822
+PAPI_L1_DCM = 60294994
+PAPI_L2_DCM = 15749989
+
+That's all, folks

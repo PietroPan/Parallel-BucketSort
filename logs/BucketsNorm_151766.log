@@ -1,0 +1,386 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 16
+Sequencial Algorithm
+
+0.000000
+[6.24% in bucket 0]
+[6.25% in bucket 1]
+[6.26% in bucket 2]
+[6.25% in bucket 3]
+[6.23% in bucket 4]
+[6.25% in bucket 5]
+[6.26% in bucket 6]
+[6.24% in bucket 7]
+[6.24% in bucket 8]
+[6.25% in bucket 9]
+[6.26% in bucket 10]
+[6.26% in bucket 11]
+[6.25% in bucket 12]
+[6.24% in bucket 13]
+[6.25% in bucket 14]
+[6.26% in bucket 15]
+
+Wall clock time: 869644 usecs
+PAPI_TOT_CYC = 2669118519
+PAPI_TOT_INS = 2791271749
+PAPI_L1_DCM = 10912972
+PAPI_L2_DCM = 1079535
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 2
+Sequencial Algorithm
+
+0.125000
+[49.99% in bucket 0]
+[50.01% in bucket 1]
+
+Wall clock time: 966051 usecs
+PAPI_TOT_CYC = 3013412674
+PAPI_TOT_INS = 3171612721
+PAPI_L1_DCM = 14803826
+PAPI_L2_DCM = 1167346
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 4
+Sequencial Algorithm
+
+0.250000
+[25.01% in bucket 0]
+[24.98% in bucket 1]
+[25.01% in bucket 2]
+[25.00% in bucket 3]
+
+Wall clock time: 929980 usecs
+PAPI_TOT_CYC = 2894899407
+PAPI_TOT_INS = 3040385108
+PAPI_L1_DCM = 13453929
+PAPI_L2_DCM = 1111977
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 8
+Sequencial Algorithm
+
+0.500000
+[12.50% in bucket 0]
+[12.51% in bucket 1]
+[12.48% in bucket 2]
+[12.50% in bucket 3]
+[12.50% in bucket 4]
+[12.52% in bucket 5]
+[12.49% in bucket 6]
+[12.51% in bucket 7]
+
+Wall clock time: 894803 usecs
+PAPI_TOT_CYC = 2780003356
+PAPI_TOT_INS = 2919263382
+PAPI_L1_DCM = 12190733
+PAPI_L2_DCM = 1076090
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 16
+Sequencial Algorithm
+
+0.000000
+[6.24% in bucket 0]
+[6.25% in bucket 1]
+[6.26% in bucket 2]
+[6.25% in bucket 3]
+[6.23% in bucket 4]
+[6.25% in bucket 5]
+[6.26% in bucket 6]
+[6.24% in bucket 7]
+[6.24% in bucket 8]
+[6.25% in bucket 9]
+[6.26% in bucket 10]
+[6.26% in bucket 11]
+[6.25% in bucket 12]
+[6.24% in bucket 13]
+[6.25% in bucket 14]
+[6.26% in bucket 15]
+
+Wall clock time: 866845 usecs
+PAPI_TOT_CYC = 2669049706
+PAPI_TOT_INS = 2791272389
+PAPI_L1_DCM = 10902934
+PAPI_L2_DCM = 1073774
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 32
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..1]
+[6.25% in buckets 2..3]
+[6.26% in buckets 4..5]
+[6.25% in buckets 6..7]
+[6.23% in buckets 8..9]
+[6.25% in buckets 10..11]
+[6.26% in buckets 12..13]
+[6.24% in buckets 14..15]
+[6.24% in buckets 16..17]
+[6.25% in buckets 18..19]
+[6.26% in buckets 20..21]
+[6.26% in buckets 22..23]
+[6.25% in buckets 24..25]
+[6.24% in buckets 26..27]
+[6.25% in buckets 28..29]
+[6.26% in buckets 30..31]
+
+Wall clock time: 838818 usecs
+PAPI_TOT_CYC = 2559145826
+PAPI_TOT_INS = 2665883497
+PAPI_L1_DCM = 9699928
+PAPI_L2_DCM = 1540469
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 64
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..3]
+[6.25% in buckets 4..7]
+[6.26% in buckets 8..11]
+[6.25% in buckets 12..15]
+[6.23% in buckets 16..19]
+[6.25% in buckets 20..23]
+[6.26% in buckets 24..27]
+[6.24% in buckets 28..31]
+[6.24% in buckets 32..35]
+[6.25% in buckets 36..39]
+[6.26% in buckets 40..43]
+[6.26% in buckets 44..47]
+[6.25% in buckets 48..51]
+[6.24% in buckets 52..55]
+[6.25% in buckets 56..59]
+[6.26% in buckets 60..63]
+
+Wall clock time: 805209 usecs
+PAPI_TOT_CYC = 2442625776
+PAPI_TOT_INS = 2539658199
+PAPI_L1_DCM = 8614282
+PAPI_L2_DCM = 1715686
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 128
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..7]
+[6.25% in buckets 8..15]
+[6.26% in buckets 16..23]
+[6.25% in buckets 24..31]
+[6.23% in buckets 32..39]
+[6.25% in buckets 40..47]
+[6.26% in buckets 48..55]
+[6.24% in buckets 56..63]
+[6.24% in buckets 64..71]
+[6.25% in buckets 72..79]
+[6.26% in buckets 80..87]
+[6.26% in buckets 88..95]
+[6.25% in buckets 96..103]
+[6.24% in buckets 104..111]
+[6.25% in buckets 112..119]
+[6.26% in buckets 120..127]
+
+Wall clock time: 771117 usecs
+PAPI_TOT_CYC = 2325417658
+PAPI_TOT_INS = 2415335757
+PAPI_L1_DCM = 8248111
+PAPI_L2_DCM = 1699101
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 256
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..15]
+[6.25% in buckets 16..31]
+[6.26% in buckets 32..47]
+[6.25% in buckets 48..63]
+[6.23% in buckets 64..79]
+[6.25% in buckets 80..95]
+[6.26% in buckets 96..111]
+[6.24% in buckets 112..127]
+[6.24% in buckets 128..143]
+[6.25% in buckets 144..159]
+[6.26% in buckets 160..175]
+[6.26% in buckets 176..191]
+[6.25% in buckets 192..207]
+[6.24% in buckets 208..223]
+[6.25% in buckets 224..239]
+[6.26% in buckets 240..255]
+
+Wall clock time: 736583 usecs
+PAPI_TOT_CYC = 2211650370
+PAPI_TOT_INS = 2290048167
+PAPI_L1_DCM = 10149916
+PAPI_L2_DCM = 1759314
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 1024
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..63]
+[6.25% in buckets 64..127]
+[6.26% in buckets 128..191]
+[6.25% in buckets 192..255]
+[6.23% in buckets 256..319]
+[6.25% in buckets 320..383]
+[6.26% in buckets 384..447]
+[6.24% in buckets 448..511]
+[6.24% in buckets 512..575]
+[6.25% in buckets 576..639]
+[6.26% in buckets 640..703]
+[6.26% in buckets 704..767]
+[6.25% in buckets 768..831]
+[6.24% in buckets 832..895]
+[6.25% in buckets 896..959]
+[6.26% in buckets 960..1023]
+
+Wall clock time: 751197 usecs
+PAPI_TOT_CYC = 2233951073
+PAPI_TOT_INS = 2041326871
+PAPI_L1_DCM = 32397963
+PAPI_L2_DCM = 8577925
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 2048
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..127]
+[6.25% in buckets 128..255]
+[6.26% in buckets 256..383]
+[6.25% in buckets 384..511]
+[6.23% in buckets 512..639]
+[6.25% in buckets 640..767]
+[6.26% in buckets 768..895]
+[6.24% in buckets 896..1023]
+[6.24% in buckets 1024..1151]
+[6.25% in buckets 1152..1279]
+[6.26% in buckets 1280..1407]
+[6.26% in buckets 1408..1535]
+[6.25% in buckets 1536..1663]
+[6.24% in buckets 1664..1791]
+[6.25% in buckets 1792..1919]
+[6.26% in buckets 1920..2047]
+
+Wall clock time: 804076 usecs
+PAPI_TOT_CYC = 2369993677
+PAPI_TOT_INS = 1917284416
+PAPI_L1_DCM = 40560976
+PAPI_L2_DCM = 16650401
+CPI = 1.000000
+
+That's all, folks
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...done!
+
+Vector Size: 10000000
+Number of Bucktes: 4096
+Sequencial Algorithm
+
+0.000000
+[6.24% in buckets 0..255]
+[6.25% in buckets 256..511]
+[6.26% in buckets 512..767]
+[6.25% in buckets 768..1023]
+[6.23% in buckets 1024..1279]
+[6.25% in buckets 1280..1535]
+[6.26% in buckets 1536..1791]
+[6.24% in buckets 1792..2047]
+[6.24% in buckets 2048..2303]
+[6.25% in buckets 2304..2559]
+[6.26% in buckets 2560..2815]
+[6.26% in buckets 2816..3071]
+[6.25% in buckets 3072..3327]
+[6.24% in buckets 3328..3583]
+[6.25% in buckets 3584..3839]
+[6.26% in buckets 3840..4095]
+
+Wall clock time: 878560 usecs
+PAPI_TOT_CYC = 2537038145
+PAPI_TOT_INS = 1793690593
+PAPI_L1_DCM = 46408548
+PAPI_L2_DCM = 27539774
+CPI = 1.000000
+
+That's all, folks

@@ -1,5 +1,5 @@
 # source files.
-SRC = sortingAlgs/insertion_sort.c sortingAlgs/quick_sort.c sortingAlgs/mergeSort.c bucket_sort_par.c bucket_sort.c main.c
+SRC = sortingAlgs/insertion_sort.c sortingAlgs/quick_sort.c sortingAlgs/mergeSort.c bucket_sort.c main.c
 
 OBJ = $(SRC:.cpp=.o)
 

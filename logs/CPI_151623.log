@@ -1,0 +1,67 @@
+
+Setting up PAPI...done!
+This system has 11 available counters.
+Warming up caches...Bucket 0 took 0.250335 seconds to sort
+Bucket 1 took 0.155994 seconds to sort
+Bucket 2 took 0.118448 seconds to sort
+Bucket 3 took 0.089489 seconds to sort
+Bucket 4 took 0.068423 seconds to sort
+Bucket 5 took 0.056293 seconds to sort
+Bucket 6 took 0.047169 seconds to sort
+Bucket 7 took 0.039451 seconds to sort
+Bucket 8 took 0.033200 seconds to sort
+Bucket 9 took 0.026292 seconds to sort
+Bucket 10 took 0.021312 seconds to sort
+Bucket 11 took 0.016282 seconds to sort
+Bucket 12 took 0.011986 seconds to sort
+Bucket 13 took 0.007817 seconds to sort
+Bucket 14 took 0.004424 seconds to sort
+Bucket 15 took 0.001284 seconds to sort
+done!
+
+Vector Size: 10000000
+Number of Bucktes: 16
+Sequencial Algorithm
+Bucket 0 took 0.212769 seconds to sort
+Bucket 1 took 0.133864 seconds to sort
+Bucket 2 took 0.101508 seconds to sort
+Bucket 3 took 0.083285 seconds to sort
+Bucket 4 took 0.068305 seconds to sort
+Bucket 5 took 0.056683 seconds to sort
+Bucket 6 took 0.047712 seconds to sort
+Bucket 7 took 0.039579 seconds to sort
+Bucket 8 took 0.032877 seconds to sort
+Bucket 9 took 0.026576 seconds to sort
+Bucket 10 took 0.021389 seconds to sort
+Bucket 11 took 0.016211 seconds to sort
+Bucket 12 took 0.012014 seconds to sort
+Bucket 13 took 0.008112 seconds to sort
+Bucket 14 took 0.004549 seconds to sort
+Bucket 15 took 0.001314 seconds to sort
+
+0.000000
+[23.60% in bucket 0]
+[14.90% in bucket 1]
+[11.64% in bucket 2]
+[9.52% in bucket 3]
+[7.93% in bucket 4]
+[6.68% in bucket 5]
+[5.64% in bucket 6]
+[4.74% in bucket 7]
+[3.96% in bucket 8]
+[3.26% in bucket 9]
+[2.63% in bucket 10]
+[2.07% in bucket 11]
+[1.54% in bucket 12]
+[1.06% in bucket 13]
+[0.61% in bucket 14]
+[0.20% in bucket 15]
+
+Wall clock time: 984788 usecs
+PAPI_TOT_CYC = 2698305481
+PAPI_TOT_INS = 2910328049
+PAPI_L1_DCM = 11733321
+PAPI_L2_DCM = 1068609
+CPI = 1.000000
+
+That's all, folks
