@@ -23,7 +23,7 @@ long long values[NUM_EVENTS], min_values[NUM_EVENTS], total_values[NUM_EVENTS];
 int retval, EventSet=PAPI_NULL;
 
 int main (int argc, char *argv[]) {
-    int v_size=1E8,nBuckets=1024,nRuns=10,arrayDist=0;//input
+    int v_size=1E6,nBuckets=256,nRuns=10,arrayDist=0;//input
     long long start_usec, end_usec, elapsed_usec, min_usec=0L,total_usec=0L;
     int i, run,num_hwcntrs = 0,th=atoi(getenv("OMP_NUM_THREADS"));
     int *v;
