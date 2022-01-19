@@ -2,7 +2,7 @@
 
 Parallel Bucket Sorting [algorithm](https://en.wikipedia.org/wiki/Bucket_sort) with OpenMP
 
-Get performance measuremnts with [Papi](https://icl.utk.edu/papi/)
+Get performance measurements with [Papi](https://icl.utk.edu/papi/)
 
 ## Run
 
