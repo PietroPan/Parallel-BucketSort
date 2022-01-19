@@ -1,7 +1,10 @@
 # Parallel-BucketSort
-BucketSort in Parallel with OpenMP
 
-Get performance measuremnts with Papi
+Parallel Bucket Sorting [algorithm](https://en.wikipedia.org/wiki/Bucket_sort) with OpenMP
+
+Get performance measuremnts with [Papi](https://icl.utk.edu/papi/)
+
+## Run
 
 Main takes 5 arguments:
 
